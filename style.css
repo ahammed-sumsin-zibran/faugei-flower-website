@@ -1,0 +1,17 @@
+/* font import link */
+
+/* root element */
+
+/* shared style */
+
+:root {
+  --primary-width: 80%;
+  --max-width: 1140px;
+
+  --heading-font-size: 53px;
+  --sub-head-font-size: 50px;
+  --regular-font-size: 22px;
+  --small-font-size: 16px;
+
+  --common-color: #e95a08;
+}
