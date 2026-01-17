@@ -14,4 +14,47 @@
   --small-font-size: 16px;
 
   --common-color: #e95a08;
+  --txt-color: hsla(0, 0%, 0%, 0.514);
+}
+
+/* navbar style starts here */
+nav {
+  width: var(--primary-width);
+  max-width: var(--max-width);
+  margin: 25px auto 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  ul {
+    display: flex;
+
+    li {
+      list-style: none;
+
+      a {
+        position: relative;
+        text-decoration: none;
+        color: #333;
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -5px;
+          width: 0;
+          height: 2px;
+          background-color: #333;
+          transition: width 0.3s ease;
+        }
+        &:hover {
+          color: black;
+
+          &::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
 }
