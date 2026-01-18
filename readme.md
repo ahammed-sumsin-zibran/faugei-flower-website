@@ -1,12 +1,3 @@
-## 🌟 WELCOME TO ( সহজ সরল সিম্পল ) ASSIGNMENT-002 😎
-
-### 📅 Deadline For 60 marks: 25th July, 2025 (11:59 pm ⏱️)
-
-### 📅 Deadline For 50 marks: 26th July, 2025 (11:59 pm ⏱️)
-
-### 📅 Deadline For 30 marks:\*\* Any time after 26th July.
-
----
 
 ## ✅ Main Requirements (50 Marks)
 
