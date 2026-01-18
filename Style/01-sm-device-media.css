@@ -168,7 +168,7 @@
 
     ul {
       margin: 0 auto;
-      width: 20%;
+      width: auto;
       display: grid;
       grid-template-columns: repeat(1, 1fr);
       gap: 20px 70px;
