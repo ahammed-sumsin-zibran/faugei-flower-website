@@ -1,65 +1,22 @@
 @media (max-width: 576px) {
   /* root element */
   :root {
-    --primary-width: 90%;
-    --max-width: 1500px;
+    --primary-width: 95%;
 
-    --heading-font-size: 53px;
-    --sub-head-font-size: 50px;
-    --regular-font-size: 12px;
-    --small-font-size: 16px;
-
-    --heading-font-family: "Noto Serif", serif;
-
-    --common-color: #e95a08;
-    --txt-color: hsla(0, 0%, 0%, 0.514);
+    --heading-font-size: 35px;
+    --sub-head-font-size: 28px;
+    --regular-font-size: 14px;
+    --small-font-size: 11px;
   }
 
   /* navbar style starts here */
   nav {
-    width: var(--primary-width);
-    max-width: var(--max-width);
     margin: 25px auto 120px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
     ul {
-      display: flex;
-      gap: 40px;
-
       li {
-        list-style: none;
-        color: var(--txt-color);
-
-        a,
-        div {
-          position: relative;
-          text-decoration: none;
-          color: var(--txt-color);
-          font-weight: 600;
-
-          &::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: -5px;
-            width: 0;
-            height: 3px;
-            background-color: var(--common-color);
-            transition: width 0.4s ease;
-            -webkit-transition: width 0.4s ease;
-            -moz-transition: width 0.4s ease;
-            -ms-transition: width 0.4s ease;
-            -o-transition: width 0.4s ease;
-          }
-          &:hover {
-            color: black;
-
-            &::after {
-              width: 100%;
-            }
-          }
+        a {
+          display: none;
         }
       }
     }
@@ -68,29 +25,19 @@
   /* banner style starts here */
   #banner {
     .container {
-      width: var(--primary-width);
-      max-width: var(--max-width);
+      width: 100%;
       margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: end;
+      flex-direction: column-reverse;
+      gap: 30px;
+      align-items: stretch;
 
       .textual-part {
-        width: 40%;
+        width: 95%;
+        margin-left: 10px;
         h1 {
           font-size: var(--heading-font-size);
           font-family: var(--heading-font-family);
         }
-
-        p {
-          color: var(--txt-color);
-          font-size: var(--regular-font-size);
-          margin-top: 15px;
-        }
-      }
-
-      img {
-        width: 100%;
       }
     }
   }
@@ -98,68 +45,29 @@
   /* card style starts here */
   #card-section {
     .container {
-      width: var(--primary-width);
-      max-width: var(--max-width);
-      margin: 150px auto;
-
-      h3 {
-        font-size: var(--sub-head-font-size);
-        font-family: var(--heading-font-family);
-        text-align: center;
-      }
+      margin: 100px auto;
 
       p {
-        width: 50%;
-        margin: 5px auto 20px;
-        text-align: center;
-        line-height: 1.4;
-        color: var(--txt-color);
+        width: 85%;
       }
       .cards {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 15px 20px;
 
         .card {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-          padding: 7px;
-          border-radius: 4px;
-          -webkit-border-radius: 4px;
-          -moz-border-radius: 4px;
-          -ms-border-radius: 4px;
-          -o-border-radius: 4px;
+          padding: 5px;
 
-          img {
-            display: block;
-            width: 100%;
-          }
           p {
             color: #000;
             font-size: 20px;
-            margin-top: 20px;
+            margin-top: 10px;
           }
 
           h4 {
             font-size: var(--regular-font-size);
             text-align: center;
-            margin: 5px 0 15px;
-          }
-
-          .btn {
-            width: 100%;
-            background-color: #e95a08;
-            border: none;
-            color: #fff;
-            font-weight: bold;
-            padding: 15px 0;
-            border-radius: 3px;
-            -webkit-border-radius: 3px;
-            -moz-border-radius: 3px;
-            -ms-border-radius: 3px;
-            -o-border-radius: 3px;
+            margin-bottom: 15px;
           }
         }
       }
@@ -167,118 +75,91 @@
   }
 
   .deals {
-    margin: 100px 0;
+    margin: 80px 0;
 
     .textual {
-      h2 {
-        font-size: var(--heading-font-size);
-        text-align: center;
-      }
       p {
-        width: 50%;
-        margin: 5px auto 20px;
-        text-align: center;
-        line-height: 1.4;
-        color: var(--txt-color);
+        width: 85%;
+        margin: 10px auto 20px;
       }
     }
     .deal-card {
-      width: var(--primary-width);
-      max-width: var(--max-width);
-      margin: 40px auto;
-      display: grid;
-      grid-template-columns: 1fr 2fr;
+      grid-template-columns: 1fr;
       gap: 24px;
 
       .deals-left {
         display: grid;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 1fr;
         gap: 24px;
-      }
-
-      .card {
-        position: relative;
-        border-radius: 16px;
-        overflow: hidden;
-        color: #fff;
-        background-size: cover;
-        background-position: center;
-
-        &::after {
-          content: "";
-          position: absolute;
-          inset: 0;
-          background: rgba(0, 0, 0, 0.35);
-        }
-
-        .content {
-          position: absolute;
-          inset: 0;
-          z-index: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          text-align: center;
-          gap: 10px;
-
-          h2,
-          h3 {
-            font-weight: 600;
-          }
-
-          a {
-            color: #fff;
-            text-decoration: none;
-            border-bottom: 2px solid #fff;
-            padding-bottom: 2px;
-            transition: 0.3s;
-
-            &:hover {
-              opacity: 0.8;
-            }
-          }
-        }
       }
 
       .bloom {
         background-image: url("../assets/deal-bloom.png");
-        min-height: 200px;
+        min-height: 220px;
       }
 
       .ana {
         background-image: url("../assets/deal-ana.png");
-        min-height: 200px;
+        min-height: 220px;
       }
 
       .zabo {
         background-image: url("../assets/deal-zabo.png");
-        min-height: 424px;
+        min-height: 220px;
 
         h2 {
-          font-size: 36px;
+          font-size: 20px;
 
           span {
             font-weight: 400;
+            color: #fff;
           }
         }
       }
     }
   }
 
+  #join {
+    height: 35vh;
+
+    .container {
+      width: 80%;
+      h3 {
+        margin-bottom: 20px;
+      }
+
+      form {
+        .email {
+          padding: 12px;
+          width: 75%;
+        }
+
+        .btn {
+          width: 25%;
+          color: #fff;
+          border: none;
+          padding: 12px;
+        }
+      }
+    }
+  }
+
   footer {
-    width: var(--primary-width);
-    max-width: var(--max-width);
-    margin: 0 auto;
     padding: 50px 0;
 
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: space-between;
-    gap: 150px;
+    grid-template-columns: 1fr;
+    gap: 20px;
 
     .logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
       p {
+        width: 75%;
+        text-align: center;
+        line-height: 1;
         margin: 15px 0;
         font-size: var(--regular-font-size);
         color: var(--txt-color);
@@ -286,67 +167,19 @@
     }
 
     ul {
+      margin: 0 auto;
+      width: 20%;
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 25px 70px;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px 70px;
 
       li {
-        list-style: none;
-
-        a {
-          color: var(--txt-color);
-          text-decoration: None;
-          text-wrap: nowrap;
-        }
+        text-align: center;
       }
     }
 
     .icons {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      align-items: center;
-      height: max-content;
-    }
-  }
-
-  #join {
-    background: url(../assets/news-letter-bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    .container {
-      width: 60%;
-      h3 {
-        font-size: var(--sub-head-font-size);
-        color: #fff;
-        font-family: var(--heading-font-family);
-        margin-bottom: 30px;
-        text-align: center;
-      }
-
-      form {
-        display: flex;
-        align-items: center;
-        .email {
-          padding: 16px;
-          width: 80%;
-          /* border: 2px solid red; */
-        }
-
-        .btn {
-          /* border: 2px solid red; */
-          width: 20%;
-          background-color: #e95a08;
-          color: #fff;
-          border: none;
-          padding: 16px;
-        }
-      }
+      margin-top: 15px;
     }
   }
 }

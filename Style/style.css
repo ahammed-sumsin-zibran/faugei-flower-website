@@ -48,13 +48,19 @@ nav {
     li {
       list-style: none;
       color: var(--txt-color);
-
       a,
       div {
         position: relative;
         text-decoration: none;
         color: var(--txt-color);
         font-weight: 600;
+        span {
+          color: var(--txt-color);
+
+          &:hover {
+            color: #000;
+          }
+        }
 
         &::after {
           content: "";
@@ -309,11 +315,36 @@ footer {
 
     li {
       list-style: none;
+      color: var(--txt-color);
 
       a {
+        position: relative;
+        text-decoration: none;
         color: var(--txt-color);
-        text-decoration: None;
+        font-weight: 400;
         text-wrap: nowrap;
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -5px;
+          width: 0;
+          height: 3px;
+          background-color: var(--common-color);
+          transition: width 0.4s ease;
+          -webkit-transition: width 0.4s ease;
+          -moz-transition: width 0.4s ease;
+          -ms-transition: width 0.4s ease;
+          -o-transition: width 0.4s ease;
+        }
+        &:hover {
+          color: black;
+
+          &::after {
+            width: 100%;
+          }
+        }
       }
     }
   }
